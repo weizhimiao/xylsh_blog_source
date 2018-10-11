@@ -1,36 +1,32 @@
 language: node_js
 node_js:
-  - "10"
-
-# Travis-CI Caching
+  - '10'
 cache:
   directories:
-    - node_modules
-
-# S: Build Lifecycle
+  - node_modules
+before_install:
+  - openssl aes-256-cbc -K $encrypted_787b9ce57685_key -iv $encrypted_787b9ce57685_iv
+    -in .travis/id_rsa_ci.enc -out ~/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
+  - eval $(ssh-agent)
+  - ssh-add ~/.ssh/id_rsa
+  - cp .travis/ssh_config ~/.ssh/config
+  - git config --global user.name "weizhimiao"
+  - git config --global user.email ""
 install:
+  - npm install -g hexo-cli
   - npm install
-
-before_script:
   - git submodule init
   - git submodule update
-  - cd themes/landscape && git checkout 73a23c51f8487cfcd7c6deec96ccc7543960d350 && cd ../..
-  - npm install -g hexo-cli
-
-# 无其他依赖项所以执行npm run build 构建就行了
+  - cd themes/landscape && git checkout 73a23c51f8487cfcd7c6deec96ccc7543960d350 &&
+    cd ../..
 script:
+  - hexo clean
   - hexo generate
+after_success:
   - hexo deploy
-
-after_script:
-
-# E: Build LifeCycle
-
-#指定分支，只有指定的分支提交时才会运行脚本
 branches:
   only:
-    - master
+  - master
 env:
- global:
-   # 我将其添加到了travis-ci的环境变量中
-   #- GH_REF: github.com/yimogit/metools.git
+  global: 
