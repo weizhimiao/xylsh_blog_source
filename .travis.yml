@@ -5,13 +5,13 @@ cache:
   directories:
   - node_modules
 before_install:
-- openssl aes-256-cbc -K $encrypted_787b9ce57685_key -iv $encrypted_787b9ce57685_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_787b9ce57685_key -iv $encrypted_787b9ce57685_iv -in ./.travis/id_rsa_ci.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
-- cp .travis/ssh_config ~/.ssh/config
+- cp ./.travis/ssh_config ~/.ssh/config
 - git config --global user.name "weizhimiao"
-- git config --global user.email ""
+- git config --global user.email "w1z2m34321@163.com"
 
 install:
 - npm install -g hexo-cli
