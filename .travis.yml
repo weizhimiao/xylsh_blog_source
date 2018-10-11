@@ -16,10 +16,6 @@ before_install:
 install:
 - npm install -g hexo-cli
 - npm install
-- git submodule init
-- git submodule update
-- cd themes/landscape && git checkout 73a23c51f8487cfcd7c6deec96ccc7543960d350 &&
-  cd ../..
 script:
 - hexo clean
 - hexo generate
