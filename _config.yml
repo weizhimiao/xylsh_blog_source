@@ -80,5 +80,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/weizhimiao/weizhimiao.github.io.git
+#  repository: https://github.com/weizhimiao/weizhimiao.github.io.git
+  repository: git@github.com:weizhimiao/weizhimiao.github.io.git
   branch: master
