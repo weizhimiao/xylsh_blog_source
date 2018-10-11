@@ -12,7 +12,8 @@ before_install:
 - cp ./.travis/ssh_config ~/.ssh/config
 - git config --global user.name "weizhimiao"
 - git config --global user.email "w1z2m34321@163.com"
-
+- cd article && git pull origin master && cd ..
+- cp -rf article/* source/
 install:
 - npm install -g hexo-cli
 - npm install
@@ -20,7 +21,7 @@ script:
 - hexo clean
 - hexo generate --silent
 after_success:
-- hexo deploy --silent
+- hexo deploy
 branches:
   only:
   - master
