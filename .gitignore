@@ -7,3 +7,4 @@ public/
 .deploy*/
 id_rsa_ci.pub
 id_rsa_ci
+id_rsa
