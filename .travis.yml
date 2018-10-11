@@ -1,30 +1,30 @@
 language: node_js
 node_js:
-  - '10'
+- '10'
 cache:
   directories:
   - node_modules
 before_install:
-  - openssl aes-256-cbc -K $encrypted_787b9ce57685_key -iv $encrypted_787b9ce57685_iv
-    -in .travis/id_rsa_ci.enc -out ~/.ssh/id_rsa -d
-  - chmod 600 ~/.ssh/id_rsa
-  - eval $(ssh-agent)
-  - ssh-add ~/.ssh/id_rsa
-  - cp .travis/ssh_config ~/.ssh/config
-  - git config --global user.name "weizhimiao"
-  - git config --global user.email ""
+- openssl aes-256-cbc -K $encrypted_787b9ce57685_key -iv $encrypted_787b9ce57685_iv
+  -in id_rsa_ci.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+- git config --global user.name "weizhimiao"
+- git config --global user.email ""
 install:
-  - npm install -g hexo-cli
-  - npm install
-  - git submodule init
-  - git submodule update
-  - cd themes/landscape && git checkout 73a23c51f8487cfcd7c6deec96ccc7543960d350 &&
-    cd ../..
+- npm install -g hexo-cli
+- npm install
+- git submodule init
+- git submodule update
+- cd themes/landscape && git checkout 73a23c51f8487cfcd7c6deec96ccc7543960d350 &&
+  cd ../..
 script:
-  - hexo clean
-  - hexo generate
+- hexo clean
+- hexo generate
 after_success:
-  - hexo deploy
+- hexo deploy
 branches:
   only:
   - master
