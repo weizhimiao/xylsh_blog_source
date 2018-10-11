@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "iojs"
+  - "10"
 
 # Travis-CI Caching
 cache:
@@ -15,10 +15,11 @@ before_script:
   - git submodule init
   - git submodule update
   - cd themes/landscape && git checkout 73a23c51f8487cfcd7c6deec96ccc7543960d350 && cd ../..
+  - npm install -g hexo-cli
 
 # 无其他依赖项所以执行npm run build 构建就行了
 script:
-  - npm run build
+  - hexo g
 
 after_script:
 
