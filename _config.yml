@@ -80,4 +80,4 @@ theme: landscape
 deploy:
   type: git
   repository: https://github.com/weizhimiao/weizhimiao.github.io.git
-  branch: gh-pages
+  branch: master
