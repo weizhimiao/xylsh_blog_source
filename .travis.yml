@@ -18,9 +18,9 @@ install:
 - npm install
 script:
 - hexo clean
-- hexo generate
+- hexo generate --silent
 after_success:
-- hexo deploy
+- hexo deploy --silent
 branches:
   only:
   - master
