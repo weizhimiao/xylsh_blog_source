@@ -1,9 +1,9 @@
 [submodule "themes/landscape"]
 	path = themes/landscape
-	url = https://github.com/hexojs/hexo-theme-landscape.git
+	url = https://github.com/weizhimiao/hexo-theme-landscape.git
 [submodule "themes/next"]
 	path = themes/next
-	url = https://github.com/iissnan/hexo-theme-next.git
+	url = https://github.com/weizhimiao/hexo-theme-next.git
 [submodule "article"]
 	path = article
 	url = https://github.com/weizhimiao/xylsh_blog_data.git
