@@ -3,17 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language:
-timezone:
+title: 行云流水
+subtitle: 却也碎碎念念
+description: 为己备忘，为他参考。
+author: zhimiao
+language: zh-Hans
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://weizhimiao.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
