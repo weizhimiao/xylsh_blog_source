@@ -94,3 +94,9 @@ symbols_count_time:
   time: true
   total_symbols: true
   total_time: true
+
+algolia:
+  applicationID: 'M4TET13RR0'
+  apiKey: '76a7982151d733e41f6bb834dc49c20f'
+  indexName: 'blog'
+  chunkSize: 5000

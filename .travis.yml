@@ -19,6 +19,7 @@ install:
 - npm install
 script:
 - hexo clean
+- hexo algolia
 - hexo generate --silent
 after_success:
 - hexo deploy
