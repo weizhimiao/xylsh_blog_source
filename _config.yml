@@ -88,3 +88,9 @@ feed: # RSS订阅插件
   type: atom
   path: atom.xml
   limit: 0
+
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
