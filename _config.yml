@@ -82,3 +82,9 @@ deploy:
 #  repository: https://github.com/weizhimiao/weizhimiao.github.io.git
   repository: git@github.com:weizhimiao/weizhimiao.github.io.git
   branch: master
+
+
+feed: # RSS订阅插件
+  type: atom
+  path: atom.xml
+  limit: 0
