@@ -1,0 +1,289 @@
+
+cache:
+  enable: true
+
+# Remove unnecessary files after hexo generate.
+minify: true
+
+
+footer:
+  since: 2016
+  powered: false
+  beian:
+    enable: true
+    icp: 京ICP备 16031041号-1
+    gongan_id: 16031041
+    gongan_num: 京ICP备 16031041号
+    gongan_icon_url: https://s1.ljcdn.com/pegasus/redskull/images/common/beian.png
+
+scheme: Mist
+
+menu:
+  home: / || fa fa-home
+  categories: /categories || fa fa-th
+  archives: /archives || fa fa-archive
+  tags: /tags || fa fa-tags
+  commonweal: /404/ || fa fa-heartbeat
+  #about: /about || fa fa-user
+
+menu_settings:
+  icons: true
+  badges: true
+
+
+# ---------------------------------------------------------------
+# Sidebar Settings
+# See: https://theme-next.org/docs/theme-settings/sidebar
+# ---------------------------------------------------------------
+
+sidebar:
+  position: right
+  b2t: true
+  scrollpercent: true
+
+back2top:
+  enable: true
+  scrollpercent: true
+
+avatar:
+  url: https://avatars.githubusercontent.com/u/11239812?v=4
+  rounded: true
+
+social:
+  微博: http://weibo.com/weizhimiao/home || weibo
+  GitHub: https://github.com/weizhimiao || github
+
+# ---------------------------------------------------------------
+# Post Settings
+# See: https://theme-next.org/docs/theme-settings/posts
+# ---------------------------------------------------------------
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically saving scroll position on each post/page in cookies.
+save_scroll: true
+
+# Automatically Excerpt. Not recommend.
+# Please use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: false
+  length: 150
+
+
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: false
+  categories: true
+
+# Post wordcount display settings
+# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  separated_meta: false
+  item_text_post: true
+  item_text_total: false
+  awl: 4
+  wpm: 275
+
+
+# Related popular posts
+# Dependencies: https://github.com/tea3/hexo-related-popular-posts
+related_posts:
+  enable: false
+  title: 相关内容 # custom header, leave empty to use the default one
+  display_in_home: true
+  params:
+    maxCount: 5
+    #PPMixingRate: 0.0
+    #isDate: false
+    #isImage: false
+    #isExcerpt: false
+
+# Declare license on posts
+post_copyright:
+  enable: true
+  license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a>
+
+# Post edit
+# Dependencies: https://github.com/hexojs/hexo-deployer-git
+post_edit:
+  enable: true
+  # url: https://github.com/theme-next/theme-next.org/_posts/edit/master/ # Link for fork & edit.
+  url: https://github.com/weizhimiao/xylsh_blog_data/edit/master/_posts/ # Link for fork & edit.
+
+# Show previous post and next post in post footer if exists
+# Available values: left | right | false
+post_navigation: right
+
+
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+
+# Reduce padding / margin indents on devices with narrow width.
+mobile_layout_economy: true
+
+codeblock:
+  # Code Highlight theme
+  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
+  # See: https://github.com/chriskempson/tomorrow-theme
+  highlight_theme: normal
+  copy_button:
+    enable: true
+
+# Reading progress bar
+reading_progress:
+  enable: true
+
+# Bookmark Support
+bookmark:
+  enable: true
+
+# `Follow me on GitHub` banner in the top-right corner.
+github_banner:
+  enable: true
+  permalink: https://github.com/weizhimiao
+
+# Enable "cheers" for archive page.
+cheers_enabled: true
+
+
+# ---------------------------------------------------------------
+# Third Party Plugins & Services Settings
+# See: https://theme-next.org/docs/third-party-services/
+# More plugins: https://github.com/theme-next/awesome-next
+# You may need to install dependencies or set CDN URLs in `vendors`
+# There are two different CDN providers by default:
+#   - jsDelivr (cdn.jsdelivr.net), works everywhere even in China
+#   - CDNJS (cdnjs.cloudflare.com), provided by cloudflare
+# ---------------------------------------------------------------
+
+math:
+  # Default (false) will load mathjax / katex script on demand.
+  # That is it only render those page which has `mathjax: true` in front-matter.
+  # If you set it to true, it will load mathjax / katex srcipt EVERY PAGE.
+  every_page: false
+
+  mathjax:
+    enable: true
+    # Available values: none | ams | all
+    tags: all
+
+  katex:
+    enable: false
+    # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
+    copy_tex: false
+
+# Valine
+# For more information: https://valine.js.org, https://github.com/xCss/Valine
+valine:
+  enable: true
+  appid: VL4PVIHFgBTavO1d38DtBqOF-gzGzoHsz # your leancloud application appid
+  appkey: 25PBfJEywRHzhdNyIqVj0VDc # your leancloud application appkey
+  notify: false # Mail notifier
+  verify: true # Verification code
+  placeholder: Just go go # Comment box placeholder
+  avatar: mm # Gravatar style
+  guest_info: nick,mail,link # Custom comment header
+  pageSize: 10 # Pagination size
+  language: zh-cn # Language, available values: en, zh-cn
+  visitor: false # Article reading statistic
+  comment_count: true # If false, comment count will only be displayed in post page, not in home page
+  recordIP: false # Whether to record the commenter IP
+  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
+  #post_meta_order: 0
+
+# AddThis Share. See: https://www.addthis.com
+# Go to https://www.addthis.com/dashboard to customize your tools.
+add_this_id: 5bc1b6fcd580b13d
+
+
+# ---------------------------------------------------------------
+# Search Services
+# See: https://theme-next.org/docs/third-party-services/search-services
+# ---------------------------------------------------------------
+
+# Algolia Search
+# See: https://github.com/theme-next/hexo-theme-next/blob/master/docs/ALGOLIA-SEARCH.md
+# Dependencies: https://github.com/theme-next/theme-next-algolia-instant-search
+algolia_search:
+  enable: true
+  hits:
+    per_page: 10
+  labels:
+    input_placeholder: Search for Posts
+    hits_empty: "We didn't find any results for the search: ${query}"
+    hits_stats: "${hits} results found in ${time} ms"
+
+# ---------------------------------------------------------------
+# Tags Settings
+# See: https://theme-next.org/docs/tag-plugins/
+# ---------------------------------------------------------------
+
+# Note tag (bs-callout)
+note:
+  # Note tag style values:
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+  style: simple
+  icons: true
+  border_radius: 3
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
+
+# Tabs tag
+tabs:
+  transition:
+    tabs: true
+    labels: true
+
+
+# ---------------------------------------------------------------
+# Animation Settings
+# ---------------------------------------------------------------
+
+
+# Fancybox. There is support for old version 2 and new version 3.
+# Please, choose only any one variant, do not need to install both.
+# For install 2.x: https://github.com/theme-next/theme-next-fancybox
+# For install 3.x: https://github.com/theme-next/theme-next-fancybox3
+fancybox: true
+
+# Do not enable both fancybox and mediumzoom.
+# A JavaScript library for zooming images like Medium.
+#mediumzoom: true
+
+# Added switch option for separated repo in 6.0.0.
+# Dependencies: https://github.com/theme-next/theme-next-fastclick
+fastclick: true
+
+# Vanilla JavaScript plugin for lazyloading images.
+lazyload: true
+
+# Pangu Support
+pangu: true
+
+quicklink:
+  enable: true
+
+# Progress bar in the top during page loading.
+# Dependencies: https://github.com/theme-next/theme-next-pace
+# For more information: https://github.com/HubSpot/pace
+pace:
+  enable: true
+  # Themes list:
+  # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
+  # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
+  theme: minimal
+
+# changyan
+changyan:
+  enable: true
+  appid: IDcysYwmWlG
+  appkey: SECRETaf1dfc2a51fa2d8f9ae8a1c0f25558c9
