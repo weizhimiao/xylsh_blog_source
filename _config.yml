@@ -87,7 +87,6 @@ theme: next
 deploy:
   type: git
   repository: https://github.com/weizhimiao/weizhimiao.github.io.git
-#  branch: master
   branch: gh-pages
 
 
