@@ -1,28 +1,43 @@
 language: node_js
 node_js:
-- '10'
-cache:
-  directories:
-  - node_modules
-before_install:
-- openssl aes-256-cbc -K $encrypted_787b9ce57685_key -iv $encrypted_787b9ce57685_iv -in ./.travis/id_rsa_ci.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
-- eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
-- cp ./.travis/ssh_config ~/.ssh/config
-- git config --global user.name "weizhimiao"
-- git config --global user.email "w1z2m34321@163.com"
-- cd article && git pull origin master && cd ..
-- cp -rf article/* source/
-install:
-- npm install -g hexo-cli
-- npm install
-script:
-- hexo clean
-- hexo algolia
-- hexo generate --silent
-after_success:
-- hexo deploy
+- '16'
+
+git:
+  depth: false
+  quiet: true
+  submodules: true
 branches:
   only:
-  - master
+    - master
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm install -g hexo-cli
+install:
+  - npm install
+script:
+  - hexo clean
+  - hexo algolia
+  - hexo generate --silent
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: docs
+  repo: weizhimiao/weizhimiao.github.io
+  target_branch: gh-pages
+  keep_history: false
+  project_name: xylsh
+  email: zhimiao2008@gmail.com
+  name: zhimiao
+  committer_from_gh: false
+  allow_empty_commit: true
+  verbose: true
+  on:
+    branch: master
+
+
