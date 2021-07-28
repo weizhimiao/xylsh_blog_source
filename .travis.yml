@@ -15,8 +15,9 @@ cache:
     - node_modules
 
 before_install:
-  - git submodule foreach git pull origin master
+#  - git submodule foreach git pull origin master
   - npm install -g hexo-cli
+  - cd article && git pull origin master && cd ..
 install:
   - npm install
 script:
