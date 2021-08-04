@@ -130,7 +130,7 @@ codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
   # See: https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: night eighties
+#  highlight_theme: tomorrow
   copy_button:
     enable: true
 
@@ -287,3 +287,20 @@ changyan:
   enable: true
   appid: IDcysYwmWlG
   appkey: SECRETaf1dfc2a51fa2d8f9ae8a1c0f25558c9
+
+
+font:
+  enable: true
+  host: //fonts.loli.net
+
+  # Font options:
+  # `external: true` will load this font family from `host` above.
+  # `family: Times New Roman`. Without any quotes.
+  # `size: x.x`. Use `em` as unit. Default: 1 (16px)
+
+  # Global font settings used for all elements inside <body>.
+  global:
+    external: true
+    family: Lato
+#    family: Noto Serif SC
+    size: 0.9
